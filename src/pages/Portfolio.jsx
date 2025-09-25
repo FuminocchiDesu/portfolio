@@ -89,8 +89,8 @@ const Portfolio = () => {
                     onClick={() => scrollToSection(item)}
                     className={`capitalize transition-colors duration-200 ${
                       activeSection === item 
-                        ? 'text-purple-400' 
-                        : 'text-white hover:text-purple-300'
+                        ? 'text-blue-400' 
+                        : 'text-white hover:text-blue-300'
                     }`}
                   >
                     {item}
@@ -119,7 +119,7 @@ const Portfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="capitalize block px-3 py-2 text-white hover:text-purple-300 transition-colors duration-200 w-full text-left"
+                  className="capitalize block px-3 py-2 text-white hover:text-blue-300 transition-colors duration-200 w-full text-left"
                 >
                   {item}
                 </button>
@@ -133,14 +133,14 @@ const Portfolio = () => {
       <section id="home" className="min-h-screen flex items-center justify-center px-4">
         <div className="text-center">
           <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-purple-400 to-pink-400 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 flex items-center justify-center text-4xl font-bold text-white shadow-2xl">
               JC
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
             Joshua Canoza
           </h1>
-          <h2 className="text-2xl md:text-3xl text-purple-300 mb-8">
+          <h2 className="text-2xl md:text-3xl text-blue-300 mb-8">
             Full Stack Developer
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
@@ -149,25 +149,22 @@ const Portfolio = () => {
             building robust backend systems and exceptional user experiences.
           </p>
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="#" className="text-white hover:text-purple-400 transition-colors duration-200">
+            <a href="#" className="text-white hover:text-blue-400 transition-colors duration-200">
               <Github size={32} />
             </a>
-            <a href="#" className="text-white hover:text-purple-400 transition-colors duration-200">
+            <a href="#" className="text-white hover:text-blue-400 transition-colors duration-200">
               <Linkedin size={32} />
             </a>
-            <a href="#" className="text-white hover:text-purple-400 transition-colors duration-200">
+            <a href="#" className="text-white hover:text-blue-400 transition-colors duration-200">
               <Mail size={32} />
             </a>
           </div>
           <button 
             onClick={() => scrollToSection('projects')}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
           >
             View My Work
           </button>
-        </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="text-white" size={32} />
         </div>
       </section>
 
@@ -179,7 +176,7 @@ const Portfolio = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-purple-400 mb-4">
+              <h3 className="text-2xl font-bold text-blue-400 mb-4">
                 Hi, I'm Joshua Canoza
               </h3>
               <p className="text-gray-300 text-lg mb-6 leading-relaxed">
@@ -210,7 +207,7 @@ const Portfolio = () => {
               <img 
                 src="/assets/pic.jpg"
                 alt="Profile"
-                className="w-80 h-100 rounded-full mx-auto shadow-2xl border-4 border-purple-400/30"
+                className="w-80 h-100 rounded-full mx-auto shadow-2xl border-4 border-blue-400/30"
               />
             </div>
           </div>
@@ -247,7 +244,7 @@ const Portfolio = () => {
                     {project.tech.map((tech, techIndex) => (
                       <span 
                         key={techIndex}
-                        className="bg-purple-600/30 text-purple-200 px-3 py-1 rounded-full text-sm"
+                        className="bg-blue-600/30 text-blue-200 px-3 py-1 rounded-full text-sm"
                       >
                         {tech}
                       </span>
@@ -257,7 +254,7 @@ const Portfolio = () => {
                     <a 
                       href={project.github}
                       target='_blank'
-                      className="flex items-center text-white hover:text-purple-400 transition-colors duration-200"
+                      className="flex items-center text-white hover:text-blue-400 transition-colors duration-200"
                     >
                       <Github size={20} className="mr-2" />
                       Code
@@ -266,7 +263,7 @@ const Portfolio = () => {
                       <a 
                         href={project.live}
                         target="_blank"
-                        className="flex items-center text-white hover:text-purple-400 transition-colors duration-200"
+                        className="flex items-center text-white hover:text-blue-400 transition-colors duration-200"
                       >
                         <ExternalLink size={20} className="mr-2" />
                         Live
@@ -290,25 +287,26 @@ const Portfolio = () => {
             I'm always open to discussing new opportunities and interesting projects.
           </p>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-              <Mail className="text-purple-400 mx-auto mb-4" size={32} />
+            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300">
+              <a 
+            href="mailto:jtcanoza@gmail.com"><Mail className="text-blue-400 mx-auto mb-4" size={32} />
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-gray-300">jtcanoza@gmail.com</p>
+              <p className="text-gray-300">jtcanoza@gmail.com</p></a>
             </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-              <a href='https://github.com/FuminocchiDesu' target='_blank'><Github className="text-purple-400 mx-auto mb-4" size={32} />
+            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300">
+              <a href='https://github.com/FuminocchiDesu' target='_blank'><Github className="text-blue-400 mx-auto mb-4" size={32} />
               <h3 className="text-white font-semibold mb-2">GitHub</h3>
               <p className="text-gray-300">@FuminocchiDesu</p></a>
             </div>
-            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20">
-              <a href='https://www.linkedin.com/in/joshua-canoza-25a825193' target='_blank'><Linkedin className="text-purple-400 mx-auto mb-4" size={32} />
+            <div className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/20 hover:transform hover:scale-105 transition-all duration-300">
+              <a href='https://www.linkedin.com/in/joshua-canoza-25a825193' target='_blank'><Linkedin className="text-blue-400 mx-auto mb-4" size={32} />
               <h3 className="text-white font-semibold mb-2">LinkedIn</h3>
               <p className="text-gray-300">Joshua Canoza</p></a>
             </div>
           </div>
           <a 
             href="mailto:jtcanoza@gmail.com"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full hover:from-purple-700 hover:to-pink-700 transition-all duration-200 transform hover:scale-105 shadow-lg inline-block"
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg inline-block"
           >
             Get In Touch
           </a>
