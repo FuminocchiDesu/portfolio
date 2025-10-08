@@ -159,12 +159,21 @@ const Portfolio = () => {
               <Mail size={32} />
             </a>
           </div>
-          <button 
-            onClick={() => scrollToSection('projects')}
-            className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
-          >
-            View My Work
-          </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg"
+            >
+              View My Work
+            </button>
+            <a 
+              href="/resume.pdf" 
+              download
+              className="bg-white/10 text-white px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-200 transform hover:scale-105 inline-block"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </section>
 
